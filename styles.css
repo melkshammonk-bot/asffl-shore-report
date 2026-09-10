@@ -72,6 +72,27 @@ a { color: inherit; }
   font-style: italic;
 }
 
+.edition-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 17px;
+  font: 800 .69rem/1.2 Arial, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.edition-nav a,
+.edition-nav span {
+  padding: 7px 10px 6px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.edition-nav a { color: var(--navy); }
+.edition-nav a:hover, .edition-nav a:focus-visible { background: var(--navy); color: white; }
+.edition-nav [aria-current="page"] { background: var(--ink); color: white; border-color: var(--ink); }
+
 .scoreboard {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -216,6 +237,58 @@ a { color: inherit; }
 
 .forecast h2 { margin-top: 0; }
 
+.quick-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin: 24px 0 30px;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+}
+
+.quick-summary div { padding: 17px; background: var(--paper); }
+.quick-summary strong { display: block; color: var(--red); font: 900 1.5rem/1 Arial, sans-serif; }
+.quick-summary span { display: block; margin-top: 7px; font: 700 .78rem/1.35 Arial, sans-serif; }
+
+.routine { margin: 22px 0; border-top: 3px solid var(--ink); }
+.routine-row { display: grid; grid-template-columns: 115px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.routine-day { color: var(--red); font: 900 .92rem/1.25 Arial, sans-serif; letter-spacing: .07em; text-transform: uppercase; }
+.routine-row p { margin: 0; }
+
+.rule-box {
+  margin: 22px 0;
+  padding: 20px 22px;
+  border: 2px solid var(--navy);
+  background: rgba(23, 50, 76, .055);
+}
+.rule-box h3 { margin-top: 0; }
+.rule-box p:last-child { margin-bottom: 0; }
+
+.roster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin: 20px 0; }
+.roster-slot { padding: 12px; border-top: 4px solid var(--navy); background: rgba(255,255,255,.45); text-align: center; }
+.roster-slot strong { display: block; font: 900 1.4rem/1 Arial, sans-serif; }
+.roster-slot span { font: 700 .72rem/1.2 Arial, sans-serif; text-transform: uppercase; }
+
+.faab-scale { display: grid; grid-template-columns: repeat(3, 1fr); margin: 20px 0; border: 1px solid var(--line); }
+.faab-scale div { padding: 15px; border-right: 1px solid var(--line); }
+.faab-scale div:last-child { border-right: 0; }
+.faab-scale strong { display: block; color: var(--red); font: 900 1.25rem/1 Arial, sans-serif; }
+.faab-scale span { font-size: .88rem; }
+
+.glossary { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.term { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.term dt { color: var(--navy); font: 900 .86rem/1.2 Arial, sans-serif; text-transform: uppercase; }
+.term dd { margin: 4px 0 0; font-size: .95rem; }
+
+.decision-tree { margin: 24px 0; padding: 22px; color: white; background: var(--navy); }
+.decision-tree h3 { margin: 0 0 18px; color: white; text-align: center; }
+.decision-step { position: relative; max-width: 560px; margin: 0 auto 20px; padding: 13px 16px; color: var(--ink); background: var(--paper); text-align: center; font: 800 .88rem/1.3 Arial, sans-serif; }
+.decision-step:not(:last-child)::after { content: "↓"; position: absolute; top: 100%; left: 50%; color: white; font-size: 1.2rem; transform: translateX(-50%); }
+.decision-step:last-child { margin-bottom: 0; background: #fff; }
+
+.deadline { padding: 16px; border: 3px double var(--red); text-align: center; }
+.deadline strong { display: block; color: var(--red); font: 900 1.25rem/1.1 Arial, sans-serif; text-transform: uppercase; }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -236,6 +309,11 @@ footer {
   .content { grid-template-columns: 1fr; padding: 25px 20px; }
   .sidebar { border-left: 0; border-top: 5px double var(--ink); padding: 25px 0 0; }
   .utility { padding-inline: 14px; font-size: .63rem; }
+  .edition-nav { flex-direction: column; }
+  .quick-summary, .roster-grid, .faab-scale, .glossary { grid-template-columns: 1fr; }
+  .routine-row { grid-template-columns: 1fr; gap: 4px; }
+  .faab-scale div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .faab-scale div:last-child { border-bottom: 0; }
   footer { flex-direction: column; padding-inline: 20px; }
 }
 
