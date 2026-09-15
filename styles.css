@@ -321,3 +321,14 @@ footer {
   body { background: white; }
   .shell { width: 100%; margin: 0; box-shadow: none; }
 }
+
+/* Latest edition promotion and Week 1 front-page headline. */
+.edition-nav { flex-wrap: wrap; }
+.latest-edition { padding: 24px 34px; border-bottom: 5px double var(--ink); }
+.latest-edition .edition-label { display: table; margin-bottom: 10px; }
+.latest-edition > a { color: var(--navy); font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 700; line-height: 1.15; }
+.latest-edition p { margin: 8px 0 0; color: var(--muted); font-style: italic; }
+.week-one .article h2.headline { margin: 0 0 24px; padding: 0; border: 0; font: 700 clamp(2.25rem, 5.8vw, 4.8rem)/.95 Georgia, "Times New Roman", serif; letter-spacing: -.045em; text-transform: none; }
+@media (max-width: 820px) {
+  .latest-edition { padding: 22px 20px; }
+}
