@@ -17,3 +17,5 @@ publication record. Do not alter old hashed snapshots.
 Keep publication copy free of private audits, draft labels and private links.
 Drafting does not authorize publication, commits, pushes or messages. Follow the
 user's explicit publication instructions and stage only intended files.
+
+For every new Tuesday Reaction, first run `npm run reaction:facts` in ../ontap-press and follow its completed-week selection rules. Use the verified completed week in all article references; publication date is independent. Never treat upcoming all-zero scores as results or silently fall back to older weeks.
